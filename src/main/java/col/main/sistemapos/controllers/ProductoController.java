@@ -20,7 +20,7 @@ public class ProductoController {
     @GetMapping("")
     public String index(@ModelAttribute Producto producto)
     {
-
+        //consultar las categorias pra enviarlas al modelview
         return "vistas/producto/productoIndex";
     }
 
