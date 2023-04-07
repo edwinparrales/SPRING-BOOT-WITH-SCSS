@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Pos</title>
+
+    <link rel="stylesheet" th:href="@{'/style.css'}">
+    <script  th:src="@{'/node_modules/bootstrap/dist/js/bootstrap.bundle.js'}"></script>
+</head>
+<body class="fondo-body">
+<nav th:replace="barraNavegacion::barraNavegacion">
+
+</nav>
+<div class="container mt-3">
+ <div class="col-8">
+     <form th:action="@{/producto/guardar}" th:object="${producto}" method="post">
+         <div class="row mb-3">
+             <label for="codigoBarras" class="col-sm-3 col-form-label">Codigo Barras:</label>
+             <div class="col-sm-9">
+                 <input type="text" class="form-control" id="codigoBarras" placeholder="" th:field="*{codigoBarras}">
+             </div>
+         </div>
+
+         <div class="row mb-3">
+             <label for="codigoInterno" class="col-sm-3 col-form-label">Codigo interno:</label>
+             <div class="col-sm-9">
+                 <input type="text" class="form-control" id="codigoInterno" placeholder="" th:field="*{codigoInterno}">
+             </div>
+         </div>
+         <div class="row mb-3">
+             <label for="nombre" class="col-sm-3 col-form-label">Nombre:</label>
+             <div class="col-sm-9">
+                 <input type="text" class="form-control" id="nombre" placeholder="" th:field="*{nombre}">
+             </div>
+         </div>
+         <div class="row mb-3">
+             <label for="presentacion" class="col-sm-3 col-form-label">Presentación:</label>
+             <div class="col-sm-9">
+                 <input type="text" class="form-control" id="presentacion" placeholder="" th:field="*{presentacion}">
+             </div>
+         </div>
+         <div class="row mb-3">
+             <label for="marca" class="col-sm-3 col-form-label">Marca:</label>
+             <div class="col-sm-9">
+                 <input type="text" class="form-control" id="marca" placeholder="" th:field="*{marca}">
+             </div>
+         </div>
+
+
+         <div class="row mb-3">
+             <label for="valor" class="col-sm-3 col-form-label">Valor:</label>
+             <div class="col-sm-9">
+                 <input type="number" min="0" class="form-control" id="valor" placeholder="" th:field="*{valor}">
+             </div>
+         </div>
+         <div class="row mb-3">
+             <label for="cantidad" class="col-sm-3 col-form-label">Cantidad:</label>
+             <div class="col-sm-9">
+                 <input type="number" min="0" class="form-control" id="cantidad" placeholder="" th:field="*{cantidad}">
+             </div>
+         </div>
+         <div class="row mb-3">
+             <label for="urlImagen" class="col-sm-3 col-form-label">Imagen:</label>
+             <div class="col-sm-9">
+                 <input type="text" class="form-control" id="urlImagen" placeholder="" th:field="*{urlImagen}">
+             </div>
+         </div>
+         <div class="row mb-3">
+             <label for="categoria" class="col-sm-3 col-form-label">Categoria:</label>
+             <div class="col-sm-9">
+                <select id="categoria" class="form-select">
+                    <option value="1" th:field="*{categoria}">Varios</option>
+                </select>
+             </div>
+         </div>
+         <div class="row mb-3">
+             <div class="col-sm-3 ">
+                 <button type="submit" class="btn btn-success container-fluid">Guardar</button>
+             </div>
+
+         </div>
+
+     </form>
+
+ </div>
+
+</div>
+
+
+
+</body>
+</html>

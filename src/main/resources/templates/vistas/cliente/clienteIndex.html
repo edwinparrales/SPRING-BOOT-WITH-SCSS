@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: beige;
+            height: 50px;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style: none;
+            height: 100%;
+        }
+
+        li {
+            flex-direction: row;
+            margin: 5px;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="">Productos</a></li>
+        <li><a href="" th:href="@{'/web/cliente'}">Clientes</a></li>
+        <li><a href="">Categorias</a></li>
+    </ul>
+</nav>
+<div>
+    <form action="" method="post">
+        <div>
+            <label for="documento">Documento:</label>
+            <input type="text" name="" id="documento">
+
+        </div>
+        <div>
+            <label>Nombres:</label>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label>telefono:</label>
+            <input type="text" name="" id="">
+        </div>
+
+        <div>
+            <label>Ciudad:</label>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label>Barrio:</label>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label>Direccion:</label>
+            <input type="text" name="" id="">
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input type="text" name="" id="">
+        </div>
+
+       <div>
+           <button type="submit">Guardar</button>
+       </div>
+    </form>
+
+</div>
+</body>
+</html>

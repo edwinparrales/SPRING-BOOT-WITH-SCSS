@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Pos</title>
+  <link rel="stylesheet" th:href="@{'/style.css'}">
+  <script  th:src="@{'/node_modules/bootstrap/dist/js/bootstrap.bundle.js'}"></script>
+</head>
+<body>
+<nav th:fragment="barraNavegacion" class="navbar navbar-expand-lg navbar-dark bg-primary-corp">
+  <div class="container-fluid">
+    <a class="navbar-brand" th:href="@{'/'}">
+      <img th:src="@{'/assets/icons/logoep.jpg'}" alt="">
+      Sistema Pos
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!--        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="menuCliente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            CLIENTES
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="menuCliente">
+            <li><a class="dropdown-item" href="#">Registrar</a></li>
+            <li><a class="dropdown-item" href="#">Consultar</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="menuProducto" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PRODUCTOS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="menuProducto">
+            <li><a class="dropdown-item" th:href="@{'/producto'}">Registrar</a></li>
+            <li><a class="dropdown-item" href="#">Consultar</a></li>
+
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+</body>
+</html>

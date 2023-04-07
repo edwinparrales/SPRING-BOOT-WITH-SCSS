@@ -1,0 +1,40 @@
+// Create your own map
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+@import "node_modules/bootstrap/scss/mixins.scss";
+//Colores corporativos
+$fondo-body:#adb5bd;
+
+
+//
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
+
+$custom-colors: (
+        "primary-corp": $indigo-900
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Then add additional custom code here
+
+.fondo-body{
+  background-color: $fondo-body ;
+}
+
+
+
